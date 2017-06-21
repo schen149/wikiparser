@@ -1,5 +1,6 @@
 package edu.illinois.cs.cogcomp.wikiparser.wikiparse;
 
+import java.io.Serializable;
 import java.util.*;
 import edu.illinois.cs.cogcomp.wikiparser.utils.Pair;
 
@@ -9,7 +10,10 @@ import edu.illinois.cs.cogcomp.wikiparser.utils.Pair;
  * 
  * Data Structure to hold all of the required data fields of a wiki page
  */
-public class WikiPage {
+public class WikiPage implements Serializable{
+
+    private static final long serialVersionUID = -543139824879265283L;
+    
     private String wikiTitle;  // This is the title in the hyperlink with underscores and decoded url
     private String pageTitle;  // Title of the page visible in the Wikipedia webpage.  This includes spaces.
     private Integer curId;  // Integer ID that is unique to every wikipedia page
